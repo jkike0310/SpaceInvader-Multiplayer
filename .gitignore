@@ -10,6 +10,15 @@
 /[Ll]ogs/
 /[Mm]emoryCaptures/
 
+
+TagWizzGame/Library/
+TagWizzGame/Temp/
+TagWizzGame/Obj/
+TagWizzGame/Build/
+TagWizzGame/Builds/
+TagWizzGame/Logs/
+TagWizzGame/UserSettings/
+
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
 
