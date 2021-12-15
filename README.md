@@ -9,3 +9,10 @@ Controls:
 
 A-D: Movement
 W: Shoot
+
+# Build
+
+Play here!
+
+https://jkike0310.github.io/spaceinvaders/
+
