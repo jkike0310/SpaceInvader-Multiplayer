@@ -41,6 +41,13 @@ MonoBehaviour:
   - RespawnSpaceship
   - TakeDamage
   - Die
+  - ShowFX
+  - PlaySound
+  - NextLevel
+  - RestEnemy
+  - DestroySelf
+  - PlaySoundDamage
+  - PlaySoundDead
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

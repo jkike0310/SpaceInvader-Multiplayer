@@ -9,6 +9,7 @@ public class NormalShoot : MonoBehaviour
     [SerializeField] private Transform originBullet;
     [SerializeField] private GameObject prefabBullet;
     [SerializeField] private float rate;
+    [SerializeField] private AudioClip shootClip;
     private float initialTime = 0f;
     private bool canShoot = true;
 
@@ -32,6 +33,7 @@ public class NormalShoot : MonoBehaviour
         if(canShoot){
             GameObject newBullet = PhotonNetwork.Instantiate(prefabBullet.name, originBullet.position, Quaternion.identity, 0);
             newBullet.GetComponent<BulletCustom>().Initialize(playerShip.damage);
+            SoundManager.instance.PlayEffect(shootClip);
             canShoot = false;            
         }
     }

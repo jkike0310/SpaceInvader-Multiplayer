@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 761975472950064547}
   - component: {fileID: 1808001488266208260}
   - component: {fileID: 2653850549368723883}
-  - component: {fileID: 5299675154188881755}
   - component: {fileID: -3580709711552463129}
   - component: {fileID: 676675127471522825}
   - component: {fileID: 8902652113120342032}
+  - component: {fileID: 5501343451786209029}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -148,24 +148,6 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!143 &5299675154188881755
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 761975472940444949}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 0.4
-  m_Radius: 0.2
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &-3580709711552463129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,6 +183,7 @@ MonoBehaviour:
   originBullet: {fileID: 6472152852531513174}
   prefabBullet: {fileID: 5351480636809936431, guid: 22533ef5ae3e41f4fa0f955cd46ec95a, type: 3}
   rate: 1
+  shootClip: {fileID: 8300000, guid: d31bacfe6a0935b449f374fed9bb6567, type: 3}
 --- !u!114 &8902652113120342032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,6 +199,32 @@ MonoBehaviour:
   horizontal: 0
   vertical: 0
   shootButton: 119
+--- !u!61 &5501343451786209029
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761975472940444949}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.4, y: 0.4}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.4, y: 0.4}
+  m_EdgeRadius: 0
 --- !u!1 &1626217268271493863
 GameObject:
   m_ObjectHideFlags: 0

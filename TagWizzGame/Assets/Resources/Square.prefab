@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 5702977034801358822}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -137,7 +137,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7765ca46a73f4704fbdcbdbeb9ffb48a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameShip: 
+  health: 0
+  damage: 0
   movementSpeed: 10
+  photonView: {fileID: 0}
+  OnShoot:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!143 &3830585413163287937
 CharacterController:
   m_ObjectHideFlags: 0

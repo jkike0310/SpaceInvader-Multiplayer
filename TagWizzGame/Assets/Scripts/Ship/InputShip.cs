@@ -6,7 +6,7 @@ public class InputShip : MonoBehaviour
 {
     [HideInInspector] public float horizontal;
     [HideInInspector] public float vertical;
-    public KeyCode shootButton;
+    public KeyCode shootButton = KeyCode.W;
 
    private void Update()
    {

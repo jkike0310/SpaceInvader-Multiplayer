@@ -14,6 +14,13 @@ public class PointsManager : MonoBehaviourPunCallbacks
     private void Start()
     {        
         pointsText = GetComponent<TMP_Text>();
+        if(PhotonNetwork.LocalPlayer.CustomProperties.ContainsKey("Points")){
+            points = (int)PhotonNetwork.LocalPlayer.CustomProperties["Points"];
+        } else
+        {
+            points = LevelManager.instance.totalPoints;
+        }
+        pointsText.text = points.ToString();
     }
     public void GainPoints(int amount){
         if(PhotonNetwork.LocalPlayer.CustomProperties.ContainsKey("Points")){
@@ -38,12 +45,13 @@ public class PointsManager : MonoBehaviourPunCallbacks
         if(PhotonNetwork.LocalPlayer.CustomProperties.ContainsKey("Points")){
             pointsText.text = PhotonNetwork.LocalPlayer.CustomProperties["Points"].ToString();            
         }        
-    }
+    }    
 
     public override void OnPlayerPropertiesUpdate(Player targetPlayer, ExitGames.Client.Photon.Hashtable changedProps)
     {
         if(changedProps.ContainsKey("Points")){
             pointsText.text = changedProps["Points"].ToString(); 
+            LevelManager.instance.totalPoints = (int) changedProps["Points"]; 
         }
     }
 }

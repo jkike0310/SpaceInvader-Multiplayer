@@ -7,10 +7,20 @@ using UnityEngine;
 public class PunConnection : MonoBehaviourPunCallbacks
 {
     private Dictionary<string, RoomInfo> cachedRoomList = new Dictionary<string, RoomInfo>();
+    [SerializeField] private GameObject levelManagerObj;
+    public override void OnEnable()
+    {
+        LevelManager levelManager = FindObjectOfType<LevelManager>();
+        if(levelManager==null)
+        {
+            Instantiate(levelManagerObj, null);
+        }
+    }
     void Start()
     {
         PhotonNetwork.GameVersion = "0.0.1";
-        PhotonNetwork.ConnectUsingSettings();
+        PhotonNetwork.ConnectUsingSettings();      
+        LevelManager.instance.Reset();
     }
 
     public override void OnConnectedToMaster()
