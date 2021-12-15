@@ -37,10 +37,10 @@ namespace Photon.Pun.Demo.Hub
 
         static void OnUpdate()
         {
-            if (EditorApplication.isUpdating || Application.isPlaying)
-            {
-                return;
-            }
+            // if (EditorApplication.isUpdating || Application.isPlaying)
+            // {
+            //     return;
+            // }
 
             bool doneBefore = EditorPrefs.GetBool("PunDemosOpenedBefore");
             EditorPrefs.SetBool("PunDemosOpenedBefore", true);
